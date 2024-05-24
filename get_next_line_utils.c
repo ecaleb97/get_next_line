@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 19:50:43 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 09:59:07 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 10:37:48 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*res;
 
