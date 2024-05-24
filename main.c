@@ -6,11 +6,11 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 10:23:39 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 17:58:50 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 19:04:05 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 #include <stdio.h>
 
 int	main(void)
