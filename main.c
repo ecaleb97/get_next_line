@@ -6,14 +6,14 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 10:23:39 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 10:43:22 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:58:50 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	int		fd;
 	int		count;
@@ -26,7 +26,6 @@ int main(void)
 		printf("Error opening file");
 		return (1);
 	}
-
 	while (1)
 	{
 		next_line = get_next_line(fd);

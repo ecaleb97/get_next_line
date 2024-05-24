@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 20:15:04 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 10:47:38 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:56:56 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*fill_line_buffer(int fd, char *left_c, char *buffer)
 			return (NULL);
 		}
 		else if (b_read == 0)
-			break;
+			break ;
 		buffer[b_read] = 0;
 		if (!left_c)
 			left_c = ft_strdup("");
@@ -54,7 +54,7 @@ static char	*fill_line_buffer(int fd, char *left_c, char *buffer)
 		free(tmp);
 		tmp = NULL;
 		if (ft_strchr(buffer, '\n'))
-			break;
+			break ;
 	}
 	return (left_c);
 }

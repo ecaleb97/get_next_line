@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 19:42:43 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 10:37:33 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:57:45 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stddef.h>
-
 
 char	*get_next_line(int fd);
 char	*ft_strdup(char *s);

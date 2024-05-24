@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 19:50:43 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 10:37:48 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:58:31 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -26,8 +26,7 @@ char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*res;
 
-	res = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) *
-	sizeof(char));
+	res = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
 	fill_str(res, s1, s2);
