@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 20:15:04 by envillan          #+#    #+#             */
-/*   Updated: 2024/05/24 10:13:44 by envillan         ###   ########.fr       */
+/*   Updated: 2024/05/24 10:47:38 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@ static char	*ft_strchr(char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == cc)
 			return ((char *) &s[i]);
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == cc)
 		return ((char *) &s[i]);
 	return (NULL);
 }
 
 static char	*fill_line_buffer(int fd, char *left_c, char *buffer)
 {
-	size_t	b_read;
+	ssize_t	b_read;
 	char	*tmp;
 
 	b_read = 1;
@@ -62,7 +62,7 @@ static char	*fill_line_buffer(int fd, char *left_c, char *buffer)
 static char	*set_line(char *line_buffer)
 {
 	char	*left_c;
-	size_t	i;
+	ssize_t	i;
 
 	i = 0;
 	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
