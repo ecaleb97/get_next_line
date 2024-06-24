@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 18:31:51 by envillan          #+#    #+#             */
-/*   Updated: 2024/06/20 19:11:11 by envillan         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:26:12 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 15
+#  define BUFFER_SIZE 42
 # endif
 
 char	*get_next_line(int fd);

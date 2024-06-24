@@ -42,7 +42,7 @@
 *.idb
 *.pdb
 
-# test files
+# txt files
 *.txt
 
 # Kernel Module Compile Results

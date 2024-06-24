@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 20:15:04 by envillan          #+#    #+#             */
-/*   Updated: 2024/06/20 19:08:47 by envillan         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:18:08 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,26 +109,15 @@ static char	*ft_rest(char *save)
 
 char	*get_next_line(int fd)
 {
-	static char	*left_c;
+	static char	*buffer;
 	char		*line;
-	char		*buffer;
 
-	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
-	{
-		free(left_c);
-		free(buffer);
-		left_c = NULL;
-		buffer = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	}
+	buffer = ft_read(fd, buffer);
 	if (!buffer)
 		return (NULL);
-	line = fill_line_buffer(fd, left_c, buffer);
-	free(buffer);
-	buffer = NULL;
-	if (!line)
-		return (NULL);
-	left_c = set_line(line);
+	line = ft_line(buffer);
+	buffer = ft_rest(buffer);
 	return (line);
 }

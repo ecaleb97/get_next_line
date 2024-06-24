@@ -6,7 +6,7 @@
 /*   By: envillan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 18:37:20 by envillan          #+#    #+#             */
-/*   Updated: 2024/06/20 19:13:19 by envillan         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:22:15 by envillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ size_t	ft_strlen(char *str)
 
 	if (!str)
 		return (0);
+	i = 0;
 	while (str[i] != '\0')
 		i++;
 	return (i);
@@ -52,6 +53,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!aux)
 		return (NULL);
 	i = 0;
+	j = 0;
 	if (s1)
 		while (s1[j] != '\0')
 			aux[i++] = s1[j++];
@@ -68,7 +70,7 @@ char	*ft_strchr(char *str, int c)
 	while (*str != '\0' && (char)c != *str)
 		str++;
 	if (*str == (char)c)
-		return ((char *)c);
+		return ((char *)str);
 	else
 		return (0);
 }
